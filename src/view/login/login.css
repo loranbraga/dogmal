@@ -1,0 +1,26 @@
+.login-content{
+  width: 100%;
+  padding: 15%;
+  margin: auto;
+  background-color: #614e5a;
+  height: 100vh;
+}
+
+.btn-login{
+  background-color: #ffffff;
+}
+
+.btn-login:hover{
+  background-color: #f21667;
+  color: #ffffff;
+}
+
+.option-login a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: .3s ease-in;
+}
+
+.option-login a:hover {
+  color: #f21667;
+}

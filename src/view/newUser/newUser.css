@@ -1,0 +1,13 @@
+.form-new-user{
+  max-width: 650px;
+}
+
+.btn-new-user{
+  background-color: #f21667;
+  color: #fff;
+}
+
+.btn-new-user:hover{
+  background-color: #614e5a;
+  color: #fff;
+}
