@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
 import './home.css'
 
@@ -7,7 +7,9 @@ import Navbar from '../components/navbar'
 
 function Home(){
   return (
-    <Navbar />
+    <>
+      <Navbar />
+    </>
   )
 }
 

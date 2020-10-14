@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Redirect } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 
 import './login.css'
 
@@ -14,16 +15,21 @@ function Login () {
   const [password, setPassword] = useState()
   const [msgType, setMsgType] = useState()
 
+  const dispatch = useDispatch()
+
   const auth = () => {
     firebase.auth().signInWithEmailAndPassword(email, password).then(result =>{
       setMsgType('ok')
+      dispatch({type: 'LOGIN', userEmail: email})
     }).catch(error => {
       setMsgType('error')
     })
   }
+  
 
   return (
     <div className="login-content d-flex aling-items-center">
+      { useSelector(state => state.loggedUser) && <Redirect to="/" />}
       <form className="form-signin mx-auto">
         <div className="text-center mb-4">
         <img src={logo} alt=""/>
@@ -40,7 +46,7 @@ function Login () {
         </div>
 
         <div className="option-login mt-3 text-center">
-          <a href="#" className="mx-2">Recuperar senha</a>
+          <Link to="lost-password" className="mx-2">Recuperar senha</Link>
           <Link to="new-user" className="mx-2">Quero me cadastrar</Link>
         </div>
 
