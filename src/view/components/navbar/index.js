@@ -24,15 +24,15 @@ function Navbar(){
           {
             useSelector(state => state.loggedUser)? 
               <>
-                <li className="nav-item active"><Link to="#" className="nav-link">Meus Post<span className="sr-only">(current)</span></Link></li>
-                <li className="nav-item active"><Link to="#"className="nav-link">Publicar<span className="sr-only">(current)</span></Link></li>
+                <li className="nav-item active"><Link to="/" className="nav-link">Meus Post<span className="sr-only">(current)</span></Link></li>
+                <li className="nav-item active"><Link to="/post"className="nav-link">Publicar<span className="sr-only">(current)</span></Link></li>
                 <li className="nav-item active"><Link onClick={() => logout()} className="nav-link">Sair<span className="sr-only">(current)</span></Link></li>
               </>  
             :
               <>
                 <li className="nav-item active"><Link to="/" className="nav-link">Home<span className="sr-only">(current)</span></Link></li>
-                <li className="nav-item active"><Link to="new-user"className="nav-link">Cadastar<span className="sr-only">(current)</span></Link></li>
-                <li className="nav-item active"><Link to="login" className="nav-link">Login<span className="sr-only">(current)</span></Link></li>
+                <li className="nav-item active"><Link to="/new-user"className="nav-link">Cadastar<span className="sr-only">(current)</span></Link></li>
+                <li className="nav-item active"><Link to="/login" className="nav-link">Login<span className="sr-only">(current)</span></Link></li>
               </>  
           }
           
