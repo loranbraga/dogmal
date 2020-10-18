@@ -14,7 +14,7 @@ function Navbar(){
 
   return (
     <nav className="navbar navbar-expand-lg">
-      <Link to="/" className="navbar-brand text-white"><i class="fas fa-beer fa-2x"></i></Link>
+      <Link to="/" className="navbar-brand text-white"><i className="fas fa-beer fa-2x"></i></Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i className="fas fa-bars text-white"></i>
       </button>
@@ -24,7 +24,7 @@ function Navbar(){
           {
             useSelector(state => state.loggedUser)? 
               <>
-                <li className="nav-item active"><Link to="/" className="nav-link">Meus Post<span className="sr-only">(current)</span></Link></li>
+                <li className="nav-item active"><Link to="/my/posts" className="nav-link">Meus Post<span className="sr-only">(current)</span></Link></li>
                 <li className="nav-item active"><Link to="/post"className="nav-link">Publicar<span className="sr-only">(current)</span></Link></li>
                 <li className="nav-item active"><Link onClick={() => logout()} className="nav-link">Sair<span className="sr-only">(current)</span></Link></li>
               </>  
