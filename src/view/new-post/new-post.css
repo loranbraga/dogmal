@@ -1,0 +1,13 @@
+.form-new-post{
+  max-width: 650px;
+}
+
+.btn-publish{
+  background-color: #614e5a;
+  color: #fff;
+}
+
+.btn-publish:hover{
+  background-color: #f21667;
+  color: #fff;
+}
